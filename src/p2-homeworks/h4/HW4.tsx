@@ -6,7 +6,7 @@ import SuperCheckbox from "./common/c3-SuperCheckbox/SuperCheckbox";
 
 function HW4() {
     const [text, setText] = useState<string>("");
-    let red:boolean
+    let red: boolean
     text ? red = false : red = true
     const error = text ? "" : "error";
     const showAlert = () => {
@@ -34,7 +34,7 @@ function HW4() {
                     error={error}
                     // className={s.blue} // проверьте, рабоет ли смешивание классов
                 />
-                <br />
+                <br/>
                 {/*should work (должно работать)*/}
                 <SuperButton
                     red={red} // пропсу с булевым значением не обязательно указывать true
@@ -42,7 +42,7 @@ function HW4() {
                 >
                     delete {/*// название кнопки попадёт в children*/}
                 </SuperButton>
-                <br />
+                <br/>
                 {/*should work (должно работать)*/}
                 <SuperCheckbox
                     checked={checked}

@@ -3,9 +3,6 @@ import GreetingContainer from "./GreetingContainer";
 import {v1} from "uuid";
 
 
-
-
-
 // types
 export type UserType = {
     _id: string
@@ -16,7 +13,7 @@ export type UserType = {
 function HW3() {
     const [users, setUsers] = useState<Array<UserType>>([]); // need to fix any
     const addUserCallback = (name: string) => {
-        let usersArray = {_id: v1() , name: name}
+        let usersArray = {_id: v1(), name: name}
         setUsers([...users, usersArray]);
     }
     return (

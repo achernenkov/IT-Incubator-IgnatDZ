@@ -4,9 +4,9 @@ import Affairs from "./Affairs";
 // types
 export type AffairPriorityType = "high" | "low" | "middle" // yo
 export type AffairType = {
-    _id:number
-    name:string
-    priority:string
+    _id: number
+    name: string
+    priority: string
 } // yo
 export type FilterType = "all" | AffairPriorityType;
 
@@ -28,8 +28,9 @@ export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): A
     return affairs
 }
 export const deleteAffair = (affairs: Array<AffairType>, _id: number): Array<AffairType> => {
-    return affairs.filter(t => t._id !== _id )
+    return affairs.filter(t => t._id !== _id)
 }
+
 function HW2() {
     const [affairs, setAffairs] = useState<Array<AffairType>>(defaultAffairs); // yo
     const [filter, setFilter] = useState<FilterType>("all");
