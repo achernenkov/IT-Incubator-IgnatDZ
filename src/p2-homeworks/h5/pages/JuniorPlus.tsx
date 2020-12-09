@@ -1,18 +1,18 @@
 import React from "react";
-import HW4 from "../../h4/HW4";
+import HW3 from "../../h3/HW3";
 import './../style.css'
 
 
-function PreJunior() {
+function JuniorPlus() {
     return (
         <div className='size'>
-            <div className='title'>Наполнение для PreJunior</div>
-            <HW4/>
+            <div className='title'>Наполнение для Junior+</div>
+            <HW3/>
         </div>
     );
 }
 
-export default PreJunior;
+export default JuniorPlus;
 
 // сделайте по аналогии пустые страницы джун и джун+
 // туда будут добавляться следующие дз
