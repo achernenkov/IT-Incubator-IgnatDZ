@@ -28,17 +28,18 @@ function HW8() {
             homeworks 8
 
             {/*should work (должно работать)*/}
+            <div className='wrapper-hw6'>
+                {finalPeople}
+                <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
+                <div>sort down</div>
 
-            {finalPeople}
-            <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
-            <div>sort down</div>
+                check 18
 
-            check 18
-
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativePeople/>*/}
-            <hr/>
+                <hr/>
+                {/*для личного творчества, могу проверить*/}
+                {/*<AlternativePeople/>*/}
+                <hr/>
+            </div>
         </div>
     );
 }
