@@ -34,7 +34,7 @@ test("sort name down", () => {
 
 });
 test("check age 18", () => {
-    const newState = homeWorkReducer(initialState, {type: "check", payload: 18});
+    const newState = homeWorkReducer(initialState, {type: "check"});
 
     expect(newState[0].name).toBe('Александр')
     expect(newState[1].name).toBe('Виктор')
