@@ -6,14 +6,15 @@ function HW9() {
         <div>
             <hr/>
             homeworks 9
+            <div className='wrapper-hw6'>
+                {/*should work (должно работать)*/}
+                <Clock/>
 
-            {/*should work (должно работать)*/}
-            <Clock/>
-
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeClock/>*/}
-            <hr/>
+                <hr/>
+                {/*для личного творчества, могу проверить*/}
+                {/*<AlternativeClock/>*/}
+                <hr/>
+            </div>
         </div>
     );
 }
