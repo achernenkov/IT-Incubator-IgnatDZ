@@ -2,7 +2,8 @@ import React from "react";
 import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 import {useDispatch, useSelector} from "react-redux";
 import {AppStoreType} from "./bll/store";
-import {HW10State, loadingAC} from "./bll/loadingReducer";
+import {loadingAC} from "./bll/loadingReducer";
+import './HW10Style.css'
 
 function HW10() {
     const loading = useSelector<AppStoreType, boolean>(state => state.loading.loading)
@@ -18,22 +19,36 @@ function HW10() {
         <div>
             <hr/>
             homeworks 10
-
-            {/*should work (должно работать)*/}
+            <div className='HW10'>
             {loading
                 ? (
-                    <div>крутилка...</div>
+                    <div className='windows8-wrapper'>
+                    <div className="windows8">
+                        <div className="wBall" id="wBall_1">
+                            <div className="wInnerBall"></div>
+                        </div>
+                        <div className="wBall" id="wBall_2">
+                            <div className="wInnerBall"></div>
+                        </div>
+                        <div className="wBall" id="wBall_3">
+                            <div className="wInnerBall"></div>
+                        </div>
+                        <div className="wBall" id="wBall_4">
+                            <div className="wInnerBall"></div>
+                        </div>
+                        <div className="wBall" id="wBall_5">
+                            <div className="wInnerBall"></div>
+                        </div>
+                    </div>
+                    </div>
                 ) : (
                     <div>
                         <SuperButton onClick={setLoading}>set loading...</SuperButton>
                     </div>
                 )
             }
-
             <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<Alternative/>*/}
-            <hr/>
+            </div>
         </div>
     );
 }
