@@ -7,8 +7,25 @@ function HW11() {
     const [value1, setValue1] = useState(0);
     const [value2, setValue2] = useState(100);
 
-    const onChangeRange = (newMinValue: number) => {
+    const setMinValue = (newMinValue: number) => {
         setValue1(newMinValue)
+    }
+
+    const setMaxValue = (newMaxValue: number) => {
+        setValue2(newMaxValue)
+    }
+
+    let min:number = value1
+    let max: number = value2
+    let disabled: boolean
+
+    if (value2 <= value1){
+        setValue1(max - 1)
+        if(value2 === 1){
+            disabled = true
+        }else {
+            disabled = false
+        }
     }
 
     return (
@@ -20,14 +37,18 @@ function HW11() {
             <div>
                 <span>{value1}</span>
                 <SuperRange
-                    onChangeRange={onChangeRange}
+                    onChangeRange={setMinValue}
+                    minValue = {min}
                 />
             </div>
 
             <div>
                 <span>{value1}</span>
                 <SuperDoubleRange
-                    // сделать так чтоб value1 и value2 изменялось
+                    onChangeRangeMin={setMinValue}
+                    onChangeRangeMax={setMaxValue}
+                    minValue = {min}
+                    maxValue = {max}
                 />
                 <span>{value2}</span>
             </div>
