@@ -7,6 +7,10 @@ function HW11() {
     const [value1, setValue1] = useState(0);
     const [value2, setValue2] = useState(100);
 
+    const onChangeRange = (newMinValue: number) => {
+        setValue1(newMinValue)
+    }
+
     return (
         <div>
             <hr/>
@@ -16,7 +20,7 @@ function HW11() {
             <div>
                 <span>{value1}</span>
                 <SuperRange
-                    // сделать так чтоб value1 изменялось
+                    onChangeRange={onChangeRange}
                 />
             </div>
 
