@@ -21,3 +21,9 @@
 .some-text {
     color: darkslateblue;
 }
+
+.wrapperHW12{
+    margin: 0 auto;
+    padding-bottom: 20px;
+    width: 100px;
+}
