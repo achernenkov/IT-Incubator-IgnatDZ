@@ -3,7 +3,10 @@ import React from "react";
 
 const Request = () => {
     return (
-        <div>1</div>
+        <div>
+            <input type="checkbox"/>
+            <button>Кнопка</button>
+        </div>
     )
 }
 
